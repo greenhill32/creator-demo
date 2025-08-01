@@ -1,72 +1,9 @@
 {
-  "schema_version": "1.0.0",
-  "name": "Creator Demo Site",
-  "description": "Demonstrates AI-actionable capabilities for a content creator, including fetching latest content, merchandise, and availability.",
-  "intents": [
-    {
-      "name": "get_latest_youtube_video",
-      "description": "Retrieves details about the creator's most recent YouTube video.",
-      "parameters": {},
-      "response": {
-        "type": "object",
-        "properties": {
-          "title": { "type": "string", "description": "Title of the video" },
-          "url": { "type": "string", "description": "URL of the video" },
-          "description": { "type": "string", "description": "Brief description of the video" }
-        },
-        "required": ["title", "url", "description"]
-      },
-      "endpoint": "/api/video",
-      "method": "GET",
-      "authentication": { "type": "none" }
-    },
-    {
-      "name": "get_merch_item",
-      "description": "Retrieves details about a specific merchandise item.",
-      "parameters": {
-        "type": "object",
-        "properties": {
-          "item_name": { "type": "string", "description": "The exact name of the merchandise item (e.g., 'new t-shirt')" }
-        },
-        "required": ["item_name"]
-      },
-      "response": {
-        "type": "object",
-        "properties": {
-          "name": { "type": "string", "description": "Name of the merchandise item" },
-          "url": { "type": "string", "description": "URL to the product page" },
-          "price": { "type": "string", "description": "Price of the item" }
-        },
-        "required": ["name", "url", "price"]
-      },
-      "endpoint": "/api/merch",
-      "method": "GET",
-      "authentication": { "type": "none" }
-    },
-    {
-      "name": "get_availability",
-      "description": "Checks the creator's availability for a given date.",
-      "parameters": {
-        "type": "object",
-        "properties": {
-          "date": { "type": "string", "format": "date", "description": "The date to check availability for (YYYY-MM-DD)" }
-        },
-        "required": ["date"]
-      },
-      "response": {
-        "type": "object",
-        "properties": {
-          "date": { "type": "string", "description": "The date checked" },
-          "available_slots": {
-            "type": "array",
-            "items": { "type": "string", "description": "Available time slot (e.g., '10:00 AM', '02:00 PM')" }
-          }
-        },
-        "required": ["date", "available_slots"]
-      },
-      "endpoint": "/api/availability",
-      "method": "GET",
-      "authentication": { "type": "none" }
-    }
-  ]
+  "intentql": "2025-08",
+  "type": "collection",
+  "items": {
+    "name": "h2",
+    "price": ".price",
+    "brand": ".brand"
+  }
 }
